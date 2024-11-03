@@ -1,7 +1,7 @@
 # Project Plan
 
 ## Title
-XZY
+Drug addiction in America
 
 ## Main Question
 
