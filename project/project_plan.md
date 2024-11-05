@@ -1,16 +1,16 @@
 # Project Plan
 
 ## Title
-Drug addiction in America
+Drug-Related Crime Analysis in Mexico
 
 ## Main Question
 
-I would like to find what?
+How do socio-economic factors and cartel presence influence the distribution and intensity of drug-related crimes across different regions of Mexico over the past decade?
 
 ## Description
 
 <!-- Describe your data science project in max. 200 words. Consider writing about why and how you attempt it. -->
-Different regions around the world have been affected by changes in surface temperature in various ways, leading to an increase in the frequency and intensity of climate-related disasters. This data science project aims to determine the effect of surface temperature on climate-related disasters.
+This question allows for a multi-dimensional analysis, considering geographic, socio-economic, and temporal factors. It also opens up the possibility of identifying high-risk areas and factors that may exacerbate drug-related crimes, providing actionable insights for policy interventions.
 
 ## Datasources
 
