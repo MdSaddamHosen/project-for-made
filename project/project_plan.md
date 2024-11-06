@@ -1,7 +1,7 @@
 # Project Plan
 
 ## Title
-Drug-Related Crime Analysis in Mexico
+Drug-related Crime Analysis in Mexico 
 
 ## Main Question
 
