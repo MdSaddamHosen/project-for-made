@@ -9,62 +9,32 @@ How do socio-economic factors and cartel presence influence the distribution and
 
 ## Description
 
-<!-- Describe your data science project in max. 200 words. Consider writing about why and how you attempt it. -->
 This question allows for a multi-dimensional analysis, considering geographic, socio-economic, and temporal factors. It also opens up the possibility of identifying high-risk areas and factors that may exacerbate drug-related crimes, providing actionable insights for policy interventions.
 
 ## Datasources
 
-<!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
-
-### Datasource1: Annual Surface Temperature Change
-* Metadata URL: https://climatedata.imf.org/datasets/4063314923d74187be9596f10d034914/explore
-* Data URL: https://opendata.arcgis.com/datasets/4063314923d74187be9596f10d034914_0.csv
+### Datasource1: Crime Data from 2020 to Present
+* Metadata URL: https://catalog.data.gov/dataset/crime-data-from-2020-to-present/resource/5eb6507e-fa82-4595-a604-023f8a326099
+* Data URL: https://data.lacity.org/api/views/2nrs-mtv8/rows.csv?accessType=DOWNLOAD
 * Data Type: CSV
 
-This dataset shows annual estimates of mean surface temperature change measured with respect to a baseline climatology, corresponding to the period 1961-2022.
+This dataset shows Crime Data from 2020 to Present .
 
-### Datasource2: Climate-related Disasters Frequency
-* Metadata URL: https://climatedata.imf.org/datasets/b13b69ee0dde43a99c811f592af4e821/explore
-* Data URL: https://opendata.arcgis.com/datasets/b13b69ee0dde43a99c811f592af4e821_0.csv
+### Datasource2: Drug Offenses by Type of Drug, Clarkston Police Department
+* Metadata URL: https://catalog.data.gov/dataset/drug-offenses-by-type-of-drug-clarkston-police-department/resource/a999f2ec-09d7-497a-b2c2-ad3ad9bd8b32
+* Data URL: https://data.wa.gov/api/views/wf4i-evff/rows.csv?accessType=DOWNLOAD
 * Data Type: CSV
 
-This dataset shows number of climate related natural disasters between 1980-2022.
+This dataset shows Drug Offenses by Type of Drug, Clarkston Police Department
 ## Work Packages
 
-<!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
+1. Drug-related Crime for project topic  
+2. Searching for suitable dataset  
+3. Writing initial project plan 
+4. Retrieving data from data source 
+5. Filter and fix data 
+6. Store data as SQLite file 
+7. Analyze Data  
 
-1. Brainstorming for project topic [#1][i1]
-2. Searching for suitable dataset [#2][i2]
-3. Writing initial project plan [#3][i3]
-4. Retrieving data from data source [#4][i4]
-5. Filter and fix data [#5][i5]
-6. Store data as SQLite file [#6][i6]
-7. Analyze Data [#7][i7]
-8. Prepare Report [#8][i8]
-9. Brainstorming for possible test cases [#9][i9]
-10. Performing tests [#10][i10]
-11. Implementing CI [#11][i11]
-12. Test CI [#12][i12]
-13. Analyze data and create figures [#13][i13]
-14. Prepare final project report [#14][i14]
-15. Prepare presentation slide [#15][i15]
-16. Record presentation [#16][i16]
-17. Licensing the project [#17][i17]
 
-[i1]: https://github.com/tanvirtanjum/MADE-SS-24/issues/1
-[i2]: https://github.com/tanvirtanjum/MADE-SS-24/issues/2
-[i3]: https://github.com/tanvirtanjum/MADE-SS-24/issues/3
-[i4]: https://github.com/tanvirtanjum/MADE-SS-24/issues/4
-[i5]: https://github.com/tanvirtanjum/MADE-SS-24/issues/5
-[i6]: https://github.com/tanvirtanjum/MADE-SS-24/issues/6
-[i7]: https://github.com/tanvirtanjum/MADE-SS-24/issues/7
-[i8]: https://github.com/tanvirtanjum/MADE-SS-24/issues/8
-[i9]: https://github.com/tanvirtanjum/MADE-SS-24/issues/9
-[i10]: https://github.com/tanvirtanjum/MADE-SS-24/issues/10
-[i11]: https://github.com/tanvirtanjum/MADE-SS-24/issues/11
-[i12]: https://github.com/tanvirtanjum/MADE-SS-24/issues/12
-[i13]: https://github.com/tanvirtanjum/MADE-SS-24/issues/13
-[i14]: https://github.com/tanvirtanjum/MADE-SS-24/issues/14
-[i15]: https://github.com/tanvirtanjum/MADE-SS-24/issues/15
-[i16]: https://github.com/tanvirtanjum/MADE-SS-24/issues/16
-[i17]: https://github.com/tanvirtanjum/MADE-SS-24/issues/17
+ 
