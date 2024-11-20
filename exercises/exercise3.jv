@@ -2,12 +2,12 @@ pipeline WorldBankPipeline {
 
     //  Data Extraction and Processing Flow
     DataDownloader
-        -> ExcelFileProcessor
-        -> TargetSheetSelector
-        -> ColumnHeaderUpdater
+        -> excelFilInterpreater
+        -> targetSheetChoose
+        -> columnHeaderUpdating
         -> DataRangeSelector
-        -> GDPTableProcessor
-        -> GDPDataSaver;
+        -> gDPTableProcessing
+        -> gDPDatakeep;
 
     DataRangeSelector  
         -> BondTableProcessor
@@ -19,10 +19,10 @@ pipeline WorldBankPipeline {
     }
 
    
-    block ExcelFileProcessor oftype XLSXInterpreter {}
+    block excelFilInterpreater oftype XLSXInterpreter  {}
 
   
-    block TargetSheetSelector oftype SheetPicker {
+    block targetSheetChoose oftype SheetPicker {
         sheetName: "Figure S5.1.2";
     }
 
@@ -32,7 +32,7 @@ pipeline WorldBankPipeline {
     }
 
     //  Update headers 
-    block ColumnHeaderUpdater oftype CellWriter {
+    block columnHeaderUpdating oftype CellWriter {
         at: range P2:S2;  
         write: [
             "Country Code",
@@ -43,7 +43,7 @@ pipeline WorldBankPipeline {
     }
 
     //  Process the GDP-related data
-    block GDPTableProcessor oftype TableInterpreter {
+    block gDPTableProcessing oftype TableInterpreter {
         header: true;
         columns: [
             "Country Code" oftype CountryCodeValidator,
@@ -61,7 +61,7 @@ pipeline WorldBankPipeline {
     }
 
     
-    block GDPDataSaver oftype SQLiteLoader {
+    block gDPDatakeep oftype SQLiteLoader {
         table: "gdpPerCapita";
         file: "./country-stats.sqlite";
     }
