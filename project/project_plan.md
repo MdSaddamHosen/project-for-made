@@ -5,7 +5,8 @@ Drug-related Crime Analysis in Mexico
 
 ## Main Question
 
-How do socio-economic factors and cartel presence influence the distribution and intensity of drug-related crimes across different regions of Mexico over the past decade?
+How can we integrate and analyze crime and arrest data to
+identify trends and correlations for improving law enforcement strategies in Los Angeles?
 
 ## Description
 
