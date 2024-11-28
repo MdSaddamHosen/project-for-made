@@ -1,7 +1,7 @@
 # Project Plan
 
 ## Title
-Drug-related Crime Analysis in Mexico 
+Drug-related Crime Analysis 
 
 ## Main Question
 
@@ -21,12 +21,12 @@ This question allows for a multi-dimensional analysis, considering geographic, s
 
 This dataset shows Crime Data from 2020 to Present .
 
-### Datasource2: Drug Offenses by Type of Drug, Clarkston Police Department
+### Datasource2: Arrest Data (2020-Present)
 * Metadata URL: https://data.lacity.org/api/views/amvf-fr72/rows.csv?accessType=DOWNLOAD
 * Data URL: https://data.wa.gov/api/views/wf4i-evff/rows.csv?accessType=DOWNLOAD
 * Data Type: CSV
 
-This dataset shows Drug Offenses by Type of Drug, Clarkston Police Department
+This dataset shows Arrest Data (2020-Present)
 ## Work Packages
 
 1. Drug-related Crime for project topic  
