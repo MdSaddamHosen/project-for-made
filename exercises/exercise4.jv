@@ -1,0 +1,106 @@
+// Pipeline
+
+pipeline CrimeDataPipeline {
+    CrimeHttpExtractor 
+    -> CrimeZipInterpreter 
+    -> CrimeFilePicker 
+    -> CrimeTextFileInterpreter 
+    -> CrimeCSVInterpreter 
+    -> columnRenameDeutschetoEnglish 
+    -> columnRenameBatteryCrime
+    -> columnSave
+    -> CrimeTableInterpreter 
+    -> CrimeMasurement
+    -> batteryCrimeTransformer 
+    -> CrimeDataLoader;
+
+    block CrimeHttpExtractor oftype HttpExtractor {
+        url : "https://www.mowesta.com/data/measure/mowesta-dataset-20221107.zip";
+    }
+
+    
+    block CrimeZipInterpreter oftype ArchiveInterpreter {
+        archiveType : "zip";
+    }
+
+    
+    block CrimeFilePicker oftype FilePicker  {
+        path : "/data.csv";
+    }
+
+    block CrimeTextFileInterpreter oftype TextFileInterpreter {
+    }
+
+    block CrimeCSVInterpreter oftype CSVInterpreter {
+        delimiter: ";";
+    }
+
+    block columnRenameDeutschetoEnglish oftype CellWriter {
+        at: range A1:E1;
+        write : ["id", "producer", "model", "month", "temperature"];
+    }
+
+    block columnRenameBatteryCrime oftype CellWriter {
+        at: cell J1;
+        write : ["battery_temperature"];
+    }
+
+
+    block columnSave oftype ColumnDeleter {
+        delete : [column F, column G, column H, column I];
+    }
+
+
+    block CrimeTableInterpreter oftype TableInterpreter {
+        header: false;
+        columns: [
+            "id" oftype positiveValueType,
+            "producer" oftype text,
+            "model" oftype text,
+            "month" oftype months,
+            "temperature" oftype decimal,
+            "battery_temperature" oftype decimal,
+        ];
+    }
+
+    block CrimeMasurement oftype TableTransformer {
+        inputColumns : ["temperature"];
+        outputColumn : "temperature";
+        uses : celsius_to_fahr;
+    }
+
+    block batteryCrimeTransformer oftype TableTransformer {
+        inputColumns : ["battery_temperature"];
+        outputColumn : "battery_temperature";
+        uses : celsius_to_fahr;
+    }
+
+    block CrimeDataLoader oftype SQLiteLoader {
+        table: 'temperatures';
+        file: 'temperatures.sqlite';
+    }
+
+    transform celsius_to_fahr {
+        from celsius oftype decimal;
+        to fahrenheit oftype decimal;
+        fahrenheit: (celsius * 9/5) + 32;
+ }
+}
+
+valuetype positiveValueType oftype integer {
+    constraints : [ positiveValueConstraint ];
+}
+
+constraint positiveValueConstraint on integer :
+    value >= 0;
+
+constraint rangeMonthConst oftype RangeConstraint {
+    lowerBound: 1;
+    lowerBoundInclusive: true;
+    upperBound: 12;
+    upperBoundInclusive: true;
+}
+
+valuetype months oftype integer {
+    constraints: [rangeMonthConst];
+}
