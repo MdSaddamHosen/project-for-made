@@ -68,7 +68,10 @@ Tasks:
 
 Write a detailed report outlining methods, analyses, and key insights regarding Brazilian deforestation.
 Incorporate visualizations to demonstrate the relationship between deforestation and carbon emissions.
-Work Packages
+
+
+
+##Work Packages##
 Objective Definition and Dataset Selection
 Data Collection and Pipeline Setup
 Data Cleaning and Preprocessing
