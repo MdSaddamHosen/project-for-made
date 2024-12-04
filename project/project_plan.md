@@ -72,13 +72,13 @@ Incorporate visualizations to demonstrate the relationship between deforestation
 
 
 ##Work Packages##
-Objective Definition and Dataset Selection
-Data Collection and Pipeline Setup
-Data Cleaning and Preprocessing
-Data Analysis
-Correlation and Trend Analysis
-Visual Analysis
-Reporting Findings
+Objective Definition and Dataset Selection , 
+Data Collection and Pipeline Setup ,
+Data Cleaning and Preprocessing ,
+Data Analysis ,
+Correlation and Trend Analysis ,
+Visual Analysis ,
+Reporting Findings ,
 Presentation
 
 
