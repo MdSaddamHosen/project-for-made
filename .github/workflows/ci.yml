@@ -25,15 +25,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./project/requirements.txt
+          pip install pandas
 
-      # Step 4: Run data pipeline
-      - name: Execute data pipeline
-        run: |
-          cd ./project
-          python data_pipeline.py
+    
 
-      # Step 5: Run tests
+      # Step 4: Run tests
       - name: Run tests
         run: |
           cd ./project
