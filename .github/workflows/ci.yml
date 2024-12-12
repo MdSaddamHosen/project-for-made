@@ -31,7 +31,7 @@ jobs:
       - name: Execute data pipeline
         run: |
           cd ./project
-          python data_pipeline.py
+          python pipeline.py
 
       # Step 5: Run tests
       - name: Run tests
