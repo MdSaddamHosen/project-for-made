@@ -1,6 +1,6 @@
 pipeline GPSStopsPipeline{
 
-    StartsGTFSExtractor  
+    StartsGTFSExtractors  
     -> StartsGTFSArchiveInterpreter  
     -> StartsGTFSFileSelecter  
     -> StartsGTFSwithTextFileInterpreter 
@@ -9,7 +9,7 @@ pipeline GPSStopsPipeline{
     -> StartsGTFSwithLoader;
 
 
-    block StartsGTFSExtractor  oftype HttpExtractor{
+    block StartsGTFSExtractors  oftype HttpExtractor{
         url:'https://gtfs.rhoenenergie-bus.de/GTFS.zip';
     }
 
